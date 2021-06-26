@@ -53,5 +53,15 @@ Changes to be committed:
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
 ```
 
+## git diffについて
+```sh
+git addする前の変更分
+# git diff
+# git diff <ファイル名>
+
+
+git addした後野変更分
+# git diff --staged
+```
 
 
