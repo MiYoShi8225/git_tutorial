@@ -25,3 +25,7 @@
 コミットする詳細情報を表示した上でコミットする
 # git commit -v
 ```
+
+## git status
+- git add した情報と git commit した情報を確認することができる
+
