@@ -260,3 +260,59 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
 
 ```
+
+
+## 
+- パスワードの情報やteam開発で必要ないファイル、フォルダをgit情報に加えない方法
+  - .gitignorを編集する
+
+```sh
+
+ignoreファイルを作成してそこにファイル名(相対パス)を記載するとそのファイルはgitに情報として追加されない
+# touch .gitignore
+# vi .gitignore
+
+# vi中
+# <ファイル名を追加>
+
+```
+
+
+```sh
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git_cmd.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        secret.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+
+# ↑は.gitignoreがない状態
+# ↓は.gitignoreにsecret.txtを記載した状態
+
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git_cmd.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial %
+```
