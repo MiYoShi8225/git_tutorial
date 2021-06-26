@@ -37,17 +37,17 @@ nothing to commit, working tree clean
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial %
 ```
 
-## git
+## git reset HEAD
 
 - stage に変更した情報を取り消す
   - 指定した変更をステージから取り消すだけなので、ワークツリーのファイルには影響がない
-  - 逆にいうと最新の情報でうわがきを行う(stage に対して)
+  - かんたんに言えばstageの情報を消すよ！(前回commitした情報から逆算して)
+
 
 ```sh
-
 # git reset HEAD <ファイル名>
 # git reset HEAD <フォルダ名>
 
 すべて変更を取り消す
-# git reser HEAD .
+# git reset HEAD .
 ```

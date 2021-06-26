@@ -317,3 +317,4 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial %
 ```
+fffff
