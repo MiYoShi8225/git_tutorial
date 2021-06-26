@@ -41,8 +41,7 @@ nothing to commit, working tree clean
 
 - stage に変更した情報を取り消す
   - 指定した変更をステージから取り消すだけなので、ワークツリーのファイルには影響がない
-  - かんたんに言えばstageの情報を消すよ！(前回commitした情報から逆算して)
-
+  - かんたんに言えば stage の情報を消すよ！(前回 commit した情報から逆算して)
 
 ```sh
 # git reset HEAD <ファイル名>
@@ -50,4 +49,14 @@ nothing to commit, working tree clean
 
 すべて変更を取り消す
 # git reset HEAD .
+```
+
+## git commit --amend
+
+- 直前の commit を修正することができる
+  - リモートリポジトリに push した情報に対して直前の commit 修正は行っては行けない！！
+
+```sh
+
+# git commit --amend
 ```
