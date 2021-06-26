@@ -215,3 +215,25 @@ no changes added to commit
  1 file changed, 34 insertions(+)
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
 ```
+
+
+## git mvについて
+- gitでのファイル名の変更やディレクトリ移動を行うもの
+
+```sh
+# git mv <前ファイル名> <後ファイル名>
+
+以下のコマンドと同じ
+# mv <前ファイル名> <後ファイル名>
+# git rm <前フォルダ>
+# git add <後フォルダ>
+```
+
+## gitHubにアップする
+```sh
+リモートリポジトリを新規追加する
+# git remote add origin <githubURL>
+
+リモートリポジトリへ情報を送信する
+# git push <リモート名><ブランチ名>
+```
