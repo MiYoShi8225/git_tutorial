@@ -29,3 +29,29 @@
 ## git status
 - git add した情報と git commit した情報を確認することができる
 
+```sh
+こいつでgit のaddとcommitした情報を記録する。
+# git status
+```
+
+```sh
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   git_cmd.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git add .
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   git_cmd.md
+
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+```
+
+
+
