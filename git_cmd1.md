@@ -27,6 +27,7 @@
 ```
 
 ## git status
+
 - git add した情報と git commit した情報を確認することができる
 
 ```sh
@@ -50,10 +51,11 @@ Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	modified:   git_cmd.md
 
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial %
 ```
 
-## git diffについて
+## git diff について
+
 ```sh
 git addする前の変更分
 # git diff
@@ -66,7 +68,8 @@ git addした後野変更分
 
 ## git log について
 
-- gitのログ情報を確認するコマンド
+- git のログ情報を確認するコマンド
+
 ```sh
 
 # git log
@@ -80,7 +83,6 @@ git addした後野変更分
 表示するコミット数を制限する
 # git log -n <コミット数>
 ```
-
 
 ```sh
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git log
@@ -107,7 +109,7 @@ Author: MiYoShi8225 <down8225@gmail.com>
 Date:   Sat Jun 26 23:11:25 2021 +0900
 
     initial commit
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial %
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git log --oneline
 ad3daf6 (HEAD -> master) git diffの情報を追加
 81cd31a cmd 情報にstatusの情報を追加
@@ -116,9 +118,10 @@ ad3daf6 (HEAD -> master) git diffの情報を追加
 
 ```
 
-
 ## git rm
+
 - ファイル削除を行うコマンドについて
+
 ```sh
 gitからもローカルからも情報を削除するコマンド
 # git rm <ファイル名>
@@ -135,9 +138,8 @@ gitからもローカルからも情報を削除するコマンド
 git checkout index.html
 ```
 
-
 ```sh
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git rm index.html 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git rm index.html
 rm 'index.html'
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status
 On branch master
@@ -156,8 +158,8 @@ M	git_cmd.md
 D	index.html
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git checkout index.html
 Updated 1 path from the index
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % ls       
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial %
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % ls
 git_cmd.md	index.html
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status
 On branch master
@@ -167,11 +169,11 @@ Changes not staged for commit:
 	modified:   git_cmd.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git rm --cached index.html 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial %
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial %
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git rm --cached index.html
 rm 'index.html'
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % ls 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % ls
 git_cmd.md	index.html
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % echo ある！
 ある！
@@ -193,7 +195,7 @@ Untracked files:
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git reset HEAD index.html
 Unstaged changes after reset:
 M	git_cmd.md
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status               
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status
 On branch master
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -201,9 +203,9 @@ Changes not staged for commit:
 	modified:   git_cmd.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git commit 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial %
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial %
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git commit
 On branch master
 Changes not staged for commit:
 	modified:   git_cmd.md
@@ -213,12 +215,12 @@ no changes added to commit
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git commit
 [master 727db4c] git rm cmdを使った実習
  1 file changed, 34 insertions(+)
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial %
 ```
 
+## git mv について
 
-## git mvについて
-- gitでのファイル名の変更やディレクトリ移動を行うもの
+- git でのファイル名の変更やディレクトリ移動を行うもの
 
 ```sh
 # git mv <前ファイル名> <後ファイル名>
@@ -229,7 +231,8 @@ no changes added to commit
 # git add <後フォルダ>
 ```
 
-## gitHubにアップする
+## gitHub にアップする
+
 ```sh
 リモートリポジトリを新規追加する
 # git remote add origin <githubURL>
@@ -240,7 +243,6 @@ no changes added to commit
 ↓で次回以降は[git push]だけでいいらしい(もしかしたら古いかも今はやらなくても使える可能性あり)
 # git push -u origin master
 ```
-
 
 ```sh
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % {
@@ -257,14 +259,14 @@ remote: Resolving deltas: 100% (7/7), done.
 To https://github.com/MiYoShi8225/git_tutorial.git
  * [new branch]      master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial %
 
 ```
 
+##
 
-## 
-- パスワードの情報やteam開発で必要ないファイル、フォルダをgit情報に加えない方法
-  - .gitignorを編集する
+- パスワードの情報や team 開発で必要ないファイル、フォルダを git 情報に加えない方法
+  - .gitignor を編集する
 
 ```sh
 
@@ -276,7 +278,6 @@ ignoreファイルを作成してそこにファイル名(相対パス)を記載
 # <ファイル名を追加>
 
 ```
-
 
 ```sh
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status
@@ -294,7 +295,7 @@ Untracked files:
         secret.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial %
 
 # ↑は.gitignoreがない状態
 # ↓は.gitignoreにsecret.txtを記載した状態

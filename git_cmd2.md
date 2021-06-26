@@ -1,7 +1,9 @@
 # git cmd2
-## git checkoutについて
+
+## git checkout について
+
 - ファイルへの変更を取り消す方法
-  - ステージ(addした情報)をもとに情報の修正を行う
+  - ステージ(add した情報)をもとに情報の修正を行う
 
 ```sh
 # git checkout -- <ファイル名>
@@ -25,18 +27,22 @@ Changes not staged for commit:
         modified:   git_cmd2.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git checkout -- git_cmd2.md 
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status                 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git checkout -- git_cmd2.md
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status
 On branch master
 Your branch is ahead of 'origin/master' by 1 commit.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
-(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial %
 ```
 
 ## git
-- stageに変更した情報を取り消す
+
+- stage に変更した情報を取り消す
+  - 指定した変更をステージから取り消すだけなので、ワークツリーのファイルには影響がない
+  - 逆にいうと最新の情報でうわがきを行う(stage に対して)
+
 ```sh
 
 # git reset HEAD <ファイル名>
