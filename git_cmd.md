@@ -115,3 +115,37 @@ ad3daf6 (HEAD -> master) git diffの情報を追加
 88b21f9 initial commit
 
 ```
+
+
+## git rm
+- ファイル削除を行うコマンドについて
+```sh
+gitからもローカルからも情報を削除するコマンド
+# git rm <ファイル名>
+# git rm -r <フォルダ名>
+
+
+ファイルを残したいとき(ローカルには残してgitの情報から削除する方法)
+# git -rm --cached <ファイル名>
+
+
+```
+
+
+```sh
+base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git rm index.html 
+rm 'index.html'
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   git_cmd.md
+
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+
+```
