@@ -236,4 +236,27 @@ no changes added to commit
 
 リモートリポジトリへ情報を送信する
 # git push <リモート名><ブランチ名>
+
+↓で次回以降は[git push]だけでいいらしい(もしかしたら古いかも今はやらなくても使える可能性あり)
+# git push -u origin master
+```
+
+
+```sh
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % {
+cursh> git remote add origin https://github.com/MiYoShi8225/git_tutorial.git
+cursh> }
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git push -u origin master
+Enumerating objects: 25, done.
+Counting objects: 100% (25/25), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (25/25), 3.95 KiB | 1011.00 KiB/s, done.
+Total 25 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), done.
+To https://github.com/MiYoShi8225/git_tutorial.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+
 ```
