@@ -128,12 +128,16 @@ gitからもローカルからも情報を削除するコマンド
 ファイルを残したいとき(ローカルには残してgitの情報から削除する方法)
 # git -rm --cached <ファイル名>
 
+リポジトリ情報の復活↓
+# git reset HEAD index.html
 
+ファイルの復活↓
+git checkout index.html
 ```
 
 
 ```sh
-base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git rm index.html 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git rm index.html 
 rm 'index.html'
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status
 On branch master
@@ -146,6 +150,68 @@ Changes not staged for commit:
   (use "git restore <file>..." to discard changes in working directory)
 	modified:   git_cmd.md
 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git reset HEAD index.html
+Unstaged changes after reset:
+M	git_cmd.md
+D	index.html
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git checkout index.html
+Updated 1 path from the index
 (base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % ls       
+git_cmd.md	index.html
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   git_cmd.md
 
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git rm --cached index.html 
+rm 'index.html'
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % ls 
+git_cmd.md	index.html
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % echo ある！
+ある！
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   git_cmd.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	index.html
+
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git reset HEAD index.html
+Unstaged changes after reset:
+M	git_cmd.md
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git status               
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   git_cmd.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git commit 
+On branch master
+Changes not staged for commit:
+	modified:   git_cmd.md
+
+no changes added to commit
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git add .
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git commit
+[master 727db4c] git rm cmdを使った実習
+ 1 file changed, 34 insertions(+)
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
 ```
