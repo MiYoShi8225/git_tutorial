@@ -94,3 +94,15 @@ Switched to branch 'feature'
 # git checkout -b <ブランチ名>
 ```
 
+## git branch -m  -d
+- ブランチの削除,変更できる
+
+```sh
+ブランチ名を削除する
+# git branch -m <新ブランチ名>
+
+ブランチを削除する
+# git branch -d <削除するブランチ名>
+
+```
+
