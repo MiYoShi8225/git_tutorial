@@ -4,13 +4,13 @@
 
 # git remote 
 
-
 # git remote -v
 
 ```
 
 ## git fetch
 ```sh
+リモートリポジトリの情報を取得して内容を受け取る
 # git fetch origin
 ```
 
@@ -106,3 +106,15 @@ Switched to branch 'feature'
 
 ```
 
+```sh
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git branch -d new_feature
+Deleted branch new_feature (was 379e717).
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % git branch
+* master
+(base) miyoshishun@miyoshishunnoMacBook-Air git_turorial % 
+```
